@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+
+  # service: 1
+  mysqlDB:
+    image: mysql:latest
+    restart: always
+    env_file:
+      - .env.mysql
+    ports:
+      - '3306:3306'
+    networks:
+      - backend_network
+    volumes:
+      - type: volume
+        source: mysql-data
+        target: /var/lib/mysql
+      - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    container_name: project_mysql_container
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+  
+  # service: 2
+  redisDB:
+    image: redis:latest
+    restart: always
+    ports:
+      - '6379:6379'
+    networks:
+      - backend_network
+    volumes:
+      - type: volume
+        source: redis-data
+        target: /data
+    container_name: project_redis_container
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+
+volumes:
+  mysql-data:
+  redis-data:
+
+networks:
+  backend_network:
+    driver: bridge
