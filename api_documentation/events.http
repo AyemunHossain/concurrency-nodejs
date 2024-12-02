@@ -17,11 +17,11 @@ Authorization: Bearer {{token}}
 
 
 ###
-POST {{base_url}}/api/purchase-tocket
+POST {{base_url}}/api/purchase-ticket
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-  "id": 30,
-  "ticket_id": 3889
+  "id": 31,
+  "ticket_id": 4214
 }

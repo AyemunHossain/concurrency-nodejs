@@ -2,7 +2,6 @@
 import eventsModel from '../models/event.model.js';
 import  redis from "../microservices/redis-connect.js";
 
-
 const createEvent = async (req, res) => {
   try {
     const user_id = req.user.sub;
@@ -118,7 +117,7 @@ const purchaseTicket = async (req, res) => {
             console.log({ nextUser, id });
             if (nextUser) {
               try {
-                const purchase = await purchaseTicketMYS(nextUser, id, ticket_id); // Attempt to process the next waiting user
+                const purchase = await purchaseTicketMYS(req, nextUser, id, ticket_id); // Attempt to process the next waiting user
                 if (purchase) {
                   if (!responseSent) {
                     responseSent = true;
@@ -169,7 +168,7 @@ const purchaseTicket = async (req, res) => {
     }
 
     // console.log({userId, id, ticket_id})
-    const purchase = await purchaseTicketMYS(userId, id, ticket_id)
+    const purchase = await purchaseTicketMYS(req, userId, id, ticket_id)
     if (purchase) {
       return res.status(200).json({ message: `Ticket purchased successfully. ${purchase}` });
     } else {
@@ -181,7 +180,7 @@ const purchaseTicket = async (req, res) => {
   }
 };
 
-async function purchaseTicketMYS(userId, eventId, ticketId) {
+async function purchaseTicketMYS(req, userId, eventId, ticketId) {
 
   const TICKET_RESERVATION_LIST_KEY = `tickets_reservation:${eventId}-list`;
   const TICKET_LIST_KEY = `tickets:${eventId}-list`;
@@ -189,6 +188,9 @@ async function purchaseTicketMYS(userId, eventId, ticketId) {
 
   try {
     if (reservedTicket) {
+      req.is_reserve = true;
+      req.TICKET_RESERVATION_LIST_KEY = TICKET_RESERVATION_LIST_KEY;
+      req.reservedTicket = reservedTicket;
 
       const availableTickets = await eventsModel.checkAvailabilityOfTicket(eventId, ticketId);
 
@@ -203,6 +205,7 @@ async function purchaseTicketMYS(userId, eventId, ticketId) {
 
         if (result) {
           await redis.redisClient.multi().lPop(TICKET_LIST_KEY).exec();
+          req.is_reserve = false;
           return ticketId;
         }
         
@@ -210,9 +213,10 @@ async function purchaseTicketMYS(userId, eventId, ticketId) {
         await redis.publisher.publish('ticket:solout', `${eventId}-${ticketId}`);
         return false;
       }
-    }
+    }else return false;
   } catch (err) {
     console.log({ err })
+    req.is_reserve = false;
     await redis.redisClient.multi().rPush(TICKET_RESERVATION_LIST_KEY, reservedTicket.toString()).exec();
     return false;
   }

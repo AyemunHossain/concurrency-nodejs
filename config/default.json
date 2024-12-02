@@ -5,8 +5,8 @@
         "db": "boiler-plate",
         "username": "secureadmin1",
         "password": "!!19$^ashiK!!19$^",
-        "connectionLimit": 100,
-        "queueLimit": 50
+        "connectionLimit": 20,
+        "queueLimit": 10
     },
     "redis": {
         "port": 6379,

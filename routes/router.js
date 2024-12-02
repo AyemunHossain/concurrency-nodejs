@@ -5,6 +5,7 @@ import eventValidator from '../validators/events.model.validation.js';
 import userValidator from '../validators/user.model.validation.js';
 import userController from '../controllers/user.controller.js';
 import userAuthenticationCheck from '../middlewares/authentication.js';
+import trackOutGoingResponse from '../middlewares/out-going-request.js';
 
 const router = express.Router();
 
@@ -14,6 +15,6 @@ router.post('/user/login', validation.bodyValidator(userValidator.userLogin), us
 
 router.post('/create-event', userAuthenticationCheck, validation.bodyValidator(eventValidator.createEvent), eventsController.createEvent);
 router.get('/get-event-tickets', userAuthenticationCheck, validation.queryValidator(eventValidator.getTicket), eventsController.getTicket);
-router.post('/purchase-ticket', userAuthenticationCheck, validation.bodyValidator(eventValidator.purchaseTicket), eventsController.purchaseTicket);
+router.post('/purchase-ticket', userAuthenticationCheck, validation.bodyValidator(eventValidator.purchaseTicket), trackOutGoingResponse, eventsController.purchaseTicket);
 
 export default router;
