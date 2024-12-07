@@ -59,7 +59,6 @@ const getTicket = async (req, res) => {
   }
 }
 
-
 const purchaseTicket = async (req, res) => {
   try {
     const { id, ticket_id } = req.body; // Event ID
@@ -195,7 +194,6 @@ async function purchaseTicketMYS(req, userId, eventId, ticketId) {
       const availableTickets = await eventsModel.checkAvailabilityOfTicket(eventId, ticketId);
 
       if (!availableTickets.length) {
-        await redis.redisClient.multi().rPush(TICKET_RESERVATION_LIST_KEY, reservedTicket.toString()).exec();
         await redis.publisher.publish('ticket:solout', `${eventId}-${ticketId}`);
         return false;
       }
@@ -208,16 +206,12 @@ async function purchaseTicketMYS(req, userId, eventId, ticketId) {
           req.is_reserve = false;
           return ticketId;
         }
-        
-        await redis.redisClient.multi().rPush(TICKET_RESERVATION_LIST_KEY, reservedTicket.toString()).exec();
+
         await redis.publisher.publish('ticket:solout', `${eventId}-${ticketId}`);
         return false;
       }
     }else return false;
   } catch (err) {
-    console.log({ err })
-    req.is_reserve = false;
-    await redis.redisClient.multi().rPush(TICKET_RESERVATION_LIST_KEY, reservedTicket.toString()).exec();
     return false;
   }
 

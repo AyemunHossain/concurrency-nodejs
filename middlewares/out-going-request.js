@@ -31,7 +31,7 @@ const trackOutGoingResponse = (req, res, next) => {
                 // Perform Redis cleanup or other necessary fallback actions here
                 await redis.redisClient
                     .multi()
-                    .lRem(req.TICKET_RESERVATION_LIST_KEY, 1, req.reservedTicket.toString())
+                    .rPush(req.TICKET_RESERVATION_LIST_KEY, req.reservedTicket.toString())
                     .exec();
                     console.log("______________________res.close________________________");
             } catch (err) {

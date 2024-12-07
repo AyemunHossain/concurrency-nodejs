@@ -3,7 +3,7 @@ import pLimit from 'p-limit';
 
 // API endpoint configuration
 const API_URL = "http://localhost:6001/api/purchase-ticket"; // Replace with your API endpoint
-const TOTAL_USERS = 100000; // Total number of simulated users
+const TOTAL_USERS = 1000; // Total number of simulated users
 const CONCURRENCY_LIMIT = 1000; // Number of concurrent requests
 
 // Function to simulate a single user purchase request
@@ -11,11 +11,11 @@ const simulateUserRequest = async (reqId, ticket_id) => {
   try {
     const response = await axios.post(
       API_URL,
-      { id: 35, ticket_id },
+      { id: 39, ticket_id },
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer eyJhbGciOiJQUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjgsInJvbGUiOiJ1c2VyIiwiZW1haWwiOiJ0ZXN0NkBnbWFpbC5jb20iLCJmdWxsX25hbWUiOiJ0ZXN0IiwidHlwZSI6ImFjY2Vzcy10b2tlbiIsImlhdCI6MTczMzE1Njg2MywiZXhwIjoxNzMzMTc4NDYzfQ.1zQLbyN6vnxxs1SUM2jYmLPxwmG58lc71tsQZ6p6OeiM6Dn-9ygoYiyAKJs5ZZuOqsIYbeeBLzM8eOUlbvolInEPPMEA_rVfU10i1qNgG5DWtnpJ5S6Z3rZBAU1DGNMV_yKmza2TDBFkJj9UVINd97trbcZwnuXs3zxup-YmonUGFnlUcw-BAsEV5M1MEG6uOBz8w3A0Z5oe7fJpf5yZyFeXGxEms6ODoVJRyxLx7c3zD9gOZqNbh5xewyHq3diPdxMxpFiRQibPH78DGTpFjghmP8Byce-3pGHQRjmSjy5NzgtgBV54LVhXw6XaFyexbaFCfUfaklBNetpqQUxOXxE3H68Ti8AOsjmXcUt_ksv0Bpf1tGDGwtj-iRmsD_02Fsx7uj1vYDj17GWd8Da8yrj4NTIVW6MsEflM0bMxG320FwJhXv8zJQy4KXo6vAZ8OCQ__lPg9Z6_4kxcsrBNKKwSkfoYYMBYlVtmWmyN_xKBKII--4YmFue79lrARbcBcEZDy5nORvGld7cg0sQSooQbxGePtyVpfK1kQuLv-X-_O70QyotjCsN_mt7RZBmqUSSmd_n5IuAva7LSZua9kxu71J1xuQ0jcD3iWrKKJ7SXE0fkdIPxW4EkwUsV7J2k89mHIONlq5Qh05H0pjbrwnWWVbgN-O5PfU8HFMnPSfE"
+          Authorization: "Bearer eyJhbGciOiJQUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjgsInJvbGUiOiJ1c2VyIiwiZW1haWwiOiJ0ZXN0NkBnbWFpbC5jb20iLCJmdWxsX25hbWUiOiJ0ZXN0IiwidHlwZSI6ImFjY2Vzcy10b2tlbiIsImlhdCI6MTczMzU5MzYyNiwiZXhwIjoxNzMzNjE1MjI2fQ.r4WILuvkwHWmLSUeLYKksh5yuuHFonnIUCo3idfzfInjQOi65hMwWl4iwo20SbX6sHvpyzQT_4ly-LuPe-SeI1hxyY8BAOBQtYHvXE7LaMaf0AVYcJWU62crqnsMRVcUYYTyGr0bPM2LUlpmmcxkt6JvWYX2bI15m_EEpl6Ax85U8plLGy_S1UXF4QwawEm0bDtTdzkz9KoAeW9t9L7OlJ2ppvTP4Nyt2IE0BNbJMhJqwyurjjnd0_6dlLB9c9wpdYAX8BW725b8DhkPkSuoPSrTBr-hkdXtGnryT4YLuVQuVZ7Ip_P-VVaBcosamSneh9VEikQ4r3l8kL0Ep35e39yCLH-NHXbMIBaFAXem2syh6b3ZJwnF7h5hrLJF-3etlPc8LAGBBSp4PB8M-fd-eSItJ5fmf6rjysQft-Z-V3ZUumRLPHdPLlnLRa22jiT_81jNNMkJqDHTGlxzRFLZRq2RK6p5qA4sAVzEW0P6JMe9CpKHPfU_Jub5otFu9rS1Ih-jNIs0shBgd4Ze_7N2RUSGVUaToxe15V7yR8lgLbGmxaSUb43TZR506FBRLlVfyPYI0Byxsyfo08Xc6flmo0Sz9hx2ulM5uD3LMSA0oG7lKAsKKyr5kE7gODCIJ8M2fHPoEX8hH7t06qWwzz90EslAKyfAAy2MoU_i-7XCtnQ"
         },
       }
     );
@@ -33,7 +33,7 @@ const runConcurrentRequests = async () => {
   const limit = pLimit(CONCURRENCY_LIMIT); // Create a concurrency limiter
   const userRequests = Array.from({ length: TOTAL_USERS }, (_, i) => {
     const reqId = i + 1;
-    const ticket_id = 4889 + reqId; // Increment ticket_id for each user
+    const ticket_id = 5688 + reqId; // Increment ticket_id for each user
     return limit(() => simulateUserRequest(reqId, ticket_id)); // Limit the concurrent execution
   });
 
