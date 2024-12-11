@@ -11,7 +11,7 @@ Authorization: Bearer {{token}}
 
 
 ###
-GET {{base_url}}/api/get-event-tickets?id=61
+GET {{base_url}}/api/get-event-tickets?id=65
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
@@ -22,6 +22,6 @@ Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-  "id": 31,
-  "ticket_id": 4214
+  "id": 65,
+  "ticket_id": 10701
 }

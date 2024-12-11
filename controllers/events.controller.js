@@ -1,6 +1,7 @@
 'use strict';
 import eventsModel from '../models/event.model.js';
 import  redis from "../microservices/redis-connect.js";
+import eventModel from '../models/event.model.js';
 
 const createEvent = async (req, res) => {
   try {
@@ -13,22 +14,25 @@ const createEvent = async (req, res) => {
     if (result) {
 
       await eventsModel.createTickets(totalTickets, result.id);
-      const TICKET_RESERVATION_LIST_KEY = `tickets_reservation:${result.id}-list`;
-      const TICKET_LIST_KEY = `tickets:${result.id}-list`;
+      var getTiketIds = await eventModel.getTiketIds(result.id);
+      getTiketIds = getTiketIds.map((ticket)=> ticket.id);
+
+      const TICKET_RESERVATION_SET_KEY = `tickets_reservation:${result.id}-list`;
+      const TICKET_SET_KEY = `tickets:${result.id}-list`;
       const WAITING_QUEUE_KEY = `users-waiting:${result.id}-list`;
       const NOTIFIED_KEY = `users-notified:${result.id}-list`;
 
       await Promise.all([
-        redis.redisClient.del(TICKET_RESERVATION_LIST_KEY),
+        redis.redisClient.del(TICKET_RESERVATION_SET_KEY),
         redis.redisClient.del(WAITING_QUEUE_KEY),
-        redis.redisClient.del(TICKET_LIST_KEY),
+        redis.redisClient.del(TICKET_SET_KEY),
         redis.redisClient.del(NOTIFIED_KEY)
       ]);
 
       // Populate tickets
-      for (let i = 1; i <= totalTickets; i++) {
-        ticketReservationPromises.push(redis.redisClient.rPush(TICKET_RESERVATION_LIST_KEY, `ticket_reserve-${i}`));
-        ticketListPromises.push(redis.redisClient.rPush(TICKET_LIST_KEY, `ticket-${i}`));
+      for (let i = 0; i < getTiketIds.length; i++) {
+        ticketReservationPromises.push(redis.redisClient.sAdd(TICKET_RESERVATION_SET_KEY, `ticket_reserve-${getTiketIds[i]}`));
+        ticketListPromises.push(redis.redisClient.sAdd(TICKET_SET_KEY, `ticket-${getTiketIds[i]}`));
       }
       await Promise.all([...ticketReservationPromises, ...ticketListPromises]);
 
@@ -64,13 +68,12 @@ const purchaseTicket = async (req, res) => {
     const { id, ticket_id } = req.body; // Event ID
     const userId = req.user.sub;
 
-    const TICKET_RESERVATION_LIST_KEY = `tickets_reservation:${id}-list`;
+    const TICKET_RESERVATION_SET_KEY = `tickets_reservation:${id}-list`;
     const WAITING_QUEUE_KEY = `users-waiting:${id}-list`;
-    const TICKET_LIST_KEY = `tickets:${id}-list`;
+    const TICKET_SET_KEY = `tickets:${id}-list`;
 
     // Check if tickets are sold out
-    const ticketsLeft = await redis.redisClient.multi().lLen(TICKET_LIST_KEY).exec();
-
+    const ticketsLeft = await redis.redisClient.multi().sCard(TICKET_SET_KEY).exec();
     if (ticketsLeft === 0) {
       const waitingCount = await redis.redisClient.multi().lLen(WAITING_QUEUE_KEY).exec();
       if (waitingCount > 0) {
@@ -79,7 +82,7 @@ const purchaseTicket = async (req, res) => {
       return res.status(400).json({ message: "Tickets are sold out." });
     }
 
-    const resurvationListLength = await redis.redisClient.multi().lLen(TICKET_RESERVATION_LIST_KEY).exec();
+    const resurvationListLength = await redis.redisClient.multi().sCard(TICKET_RESERVATION_SET_KEY).exec();
 
     if (resurvationListLength === 0) {
       await redis.redisClient.multi().rPush(WAITING_QUEUE_KEY, userId.toString()).exec();
@@ -181,36 +184,49 @@ const purchaseTicket = async (req, res) => {
 
 async function purchaseTicketMYS(req, userId, eventId, ticketId) {
 
-  const TICKET_RESERVATION_LIST_KEY = `tickets_reservation:${eventId}-list`;
-  const TICKET_LIST_KEY = `tickets:${eventId}-list`;
-  const reservedTicket = await reserveTicket(userId, TICKET_RESERVATION_LIST_KEY);
+  const TICKET_RESERVATION_SET_KEY = `tickets_reservation:${eventId}-list`;
+  const TICKET_SET_KEY = `tickets:${eventId}-list`;
+  const reservedTicket = await reserveTicket(userId, TICKET_RESERVATION_SET_KEY, ticketId);
 
   try {
     if (reservedTicket) {
       req.is_reserve = true;
-      req.TICKET_RESERVATION_LIST_KEY = TICKET_RESERVATION_LIST_KEY;
+      req.TICKET_RESERVATION_SET_KEY = TICKET_RESERVATION_SET_KEY;
       req.reservedTicket = reservedTicket;
 
-      const availableTickets = await eventsModel.checkAvailabilityOfTicket(eventId, ticketId);
+      const availableTickets = await redis.redisClient.multi().sIsMember(TICKET_SET_KEY, `ticket-${ticketId}`)
 
-      if (!availableTickets.length) {
+      console.log({availableTickets})
+      if (!availableTickets) {
         await redis.publisher.publish('ticket:solout', `${eventId}-${ticketId}`);
+        await redis.redisClient.multi().del(TICKET_RESERVATION_SET_KEY);
         return false;
       }
 
       if (availableTickets) {
-        const result = await eventsModel.purchasingTicket({ event_id: eventId, ticket_id: ticketId });
+
+        setTimeout(() => {
+          
+        }, 2000);
+        // const result = await eventsModel.purchasingTicket({ event_id: eventId, ticket_id: ticketId });
+        const result = false;
 
         if (result) {
-          await redis.redisClient.multi().lPop(TICKET_LIST_KEY).exec();
-          req.is_reserve = false;
+          const result = await redis.redisClient.multi().sRem(TICKET_SET_KEY, `ticket-${ticketId}`).exec(); 
+          req.is_reserve =  result?.[0] ? true : false;
+          req.TICKET_RESERVATION_SET_KEY = result?.[0] ? TICKET_RESERVATION_SET_KEY : null;
+          req.reservedTicket = result?.[0] ? reservedTicket : null;
+
           return ticketId;
         }
 
         await redis.publisher.publish('ticket:solout', `${eventId}-${ticketId}`);
         return false;
       }
-    }else return false;
+    }else {
+      // todo
+      // const exists = await redisClient.sismember('mySet', 'item3');
+      return false};
   } catch (err) {
     return false;
   }
@@ -219,11 +235,15 @@ async function purchaseTicketMYS(req, userId, eventId, ticketId) {
 }
 
 // Reserve a ticket for the user
-async function reserveTicket(userId, reservationListKey) {
-  const ticket = await redis.redisClient.multi().lPop(reservationListKey).exec();
-  return ticket && ticket[0] ? ticket[0] : null;
-}
+async function reserveTicket(userId, reservationListKey, ticket_id) {
+  const result = await redis.redisClient
+    .multi()
+    .sRem(reservationListKey, `ticket_reserve-${ticket_id}`)
+    .exec();
 
+  const removedCount = result?.[0]; 
+  return removedCount === 1 ? `ticket_reserve-${ticket_id}` : null;
+}
 export default {
   createEvent,
   getTicket,

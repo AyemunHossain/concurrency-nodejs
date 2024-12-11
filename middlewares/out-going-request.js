@@ -13,7 +13,7 @@ const trackOutGoingResponse = (req, res, next) => {
             try {
                 await redis.redisClient
                     .multi()
-                    .rPush(req.TICKET_RESERVATION_LIST_KEY, req.reservedTicket.toString())
+                    .sAdd(req.TICKET_RESERVATION_LIST_KEY, req.reservedTicket.toString())
                     .exec();
                 console.log("______________________res.end________________________");
             } catch (err) {
@@ -31,7 +31,7 @@ const trackOutGoingResponse = (req, res, next) => {
                 // Perform Redis cleanup or other necessary fallback actions here
                 await redis.redisClient
                     .multi()
-                    .rPush(req.TICKET_RESERVATION_LIST_KEY, req.reservedTicket.toString())
+                    .sAdd(req.TICKET_RESERVATION_LIST_KEY, req.reservedTicket.toString())
                     .exec();
                     console.log("______________________res.close________________________");
             } catch (err) {

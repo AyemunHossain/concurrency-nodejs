@@ -76,7 +76,7 @@ const createTickets = async (numberOfSeats, eventId) => {
         });
       });
 
-      return { affectedRows: result.affectedRows };
+      return { affectedRows: result };
     } finally {
       connection.release();
     }
@@ -124,6 +124,46 @@ const getTicket = async (eventId) => {
     throw err;
   }
 };
+
+const getTiketIds = async (eventId) => {
+  try {
+    const connection = await new Promise((resolve, reject) => {
+      mysql.getConnection("MASTER", (err, conn) => {
+        if (err) {
+          console.error("Database connection failed:", err.stack);
+          reject(err);
+        } else {
+          resolve(conn);
+        }
+      });
+    });
+
+    try {
+      const result = await new Promise((resolve, reject) => {
+        connection.query(
+          "SELECT id FROM tickets WHERE event_id = ?",
+          [eventId],
+          (err, result) => {
+            if (err) {
+              console.error("Error occurred while fetching tickets:", err.stack);
+              reject(err);
+            } else {
+              resolve(result);
+            }
+          }
+        );
+      });
+
+      return result;
+    } finally {
+      connection.release();
+    }
+  } catch (err) {
+    console.error("getTicket Error:", err);
+    throw err;
+  }
+};
+
 
 const purchasingTicket = async (data) => {
   const connection = await new Promise((resolve, reject) => {
@@ -258,5 +298,6 @@ export default{
   createTickets,
   getTicket,
   purchasingTicket,
-  checkAvailabilityOfTicket
+  checkAvailabilityOfTicket,
+  getTiketIds
 }
