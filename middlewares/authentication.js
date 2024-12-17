@@ -17,14 +17,14 @@ const userAuthenticationCheck = (req, res, next) => {
   try {
     decodedToken = password.decodeJWT(token);
   } catch (error) {
-    console.log({ error });
+    //console.log({ error });
     return res.status(401).json({ success: false, error: "Not authenticated" });
   }
 
   if (!decodedToken) {
     return res.status(401).json({ success: false, error: "Not authenticated" });
   }
-  console.log({ decodedToken });
+  //console.log({ decodedToken });
   req.user = decodedToken;
   next();
 };

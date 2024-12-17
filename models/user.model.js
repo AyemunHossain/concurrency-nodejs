@@ -29,13 +29,13 @@ const checkIfEmailExist = async (email) => {
       });
       return result ? result.id : null;
     } catch (err) {
-      console.log({ checkIfEmailExist: err });
+      //console.log({ checkIfEmailExist: err });
       throw err;
     } finally {
       connection.release();
     }
   } catch (err) {
-    console.log({ checkIfEmailExist: err });
+    //console.log({ checkIfEmailExist: err });
     throw err;
   }
 }
@@ -69,13 +69,13 @@ const getUserDetails = async (email) => {
       });
       return result;
     } catch (err) {
-      console.log({ getUserDetails: err });
+      //console.log({ getUserDetails: err });
       throw err;
     } finally {
       connection.release();
     }
   } catch (err) {
-    console.log({ getUserDetails: err });
+    //console.log({ getUserDetails: err });
     throw err;
   }
 };
@@ -120,13 +120,13 @@ const createUser = async (bodyData) => {
       return false;
       
     } catch (err) {
-      console.log({ createUser: err });
+      //console.log({ createUser: err });
       throw err;
     } finally {
       connection.release();
     }
   } catch (err) {
-    console.log({ createUser: err });
+    //console.log({ createUser: err });
     throw err;
   }
 };
@@ -161,13 +161,13 @@ const createAdminUser = async (bodyData) => {
       });
       return result;
     } catch (err) {
-      console.log({ createAdminUser: err });
+      //console.log({ createAdminUser: err });
       throw err;
     } finally {
       connection.release();
     }
   } catch (err) {
-    console.log({ createAdminUser: err });
+    //console.log({ createAdminUser: err });
     throw err;
   }
 };

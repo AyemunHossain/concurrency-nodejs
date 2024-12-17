@@ -1,6 +1,6 @@
 'use strict';
 import eventsModel from '../models/event.model.js';
-import  redis from "../microservices/redis-connect.js";
+import redis from "../microservices/redis-connect.js";
 import eventModel from '../models/event.model.js';
 
 const createEvent = async (req, res) => {
@@ -15,7 +15,7 @@ const createEvent = async (req, res) => {
 
       await eventsModel.createTickets(totalTickets, result.id);
       var getTiketIds = await eventModel.getTiketIds(result.id);
-      getTiketIds = getTiketIds.map((ticket)=> ticket.id);
+      getTiketIds = getTiketIds.map((ticket) => ticket.id);
 
       const TICKET_RESERVATION_SET_KEY = `tickets_reservation:${result.id}-list`;
       const TICKET_SET_KEY = `tickets:${result.id}-list`;
@@ -49,7 +49,7 @@ const createEvent = async (req, res) => {
 const getTicket = async (req, res) => {
   try {
     const { id } = req.query;
-    console.log({ id });
+    //console.log({ id });
 
     const result = await eventsModel.getTicket(id);
     if (result) {
@@ -82,18 +82,31 @@ const purchaseTicket = async (req, res) => {
     // Add user to the waiting queue if no reservations exist
     const reservationListLength = await redis.redisClient.sCard(TICKET_RESERVATION_SET_KEY);
     if (reservationListLength === 0) {
-      await redis.redisClient.rPush(WAITING_QUEUE_KEY, userId);
+      const alreadyInQueue = await redis.redisClient.lPos(WAITING_QUEUE_KEY, String(userId));
+      if (alreadyInQueue === null) {
+        await redis.redisClient.rPush(WAITING_QUEUE_KEY, String(userId));
+      }
 
       const result = await handleWaitingQueue(userId, id, ticket_id, req);
       return res.status(result.status).json(result.data);
     }
 
     // Direct ticket purchase attempt
-    const purchase = await purchaseTicketMYS(req, userId, id, ticket_id);
-    if (purchase) {
-      return res.status(200).json({ message: `Ticket purchased successfully. ${purchase}` });
+    const { purchased, ticket, reason, waiting } = await purchaseTicketMYS(req, userId, id, ticket_id);
+    if (purchased) {
+      return res.status(200).json({ message: `Ticket purchased successfully. ${ticket}` });
     } else {
-      return res.status(500).json({ message: 'Ticket purchase failed. Please try again.' });
+
+      if(waiting){
+        const alreadyInQueue = await redis.redisClient.lPos(WAITING_QUEUE_KEY, String(userId));
+        if (alreadyInQueue === null) {
+          await redis.redisClient.rPush(WAITING_QUEUE_KEY, String(userId));
+        }
+        const result = await handleWaitingQueue(userId, id, ticket_id, req);
+        return res.status(result.status).json(result.data);
+      }
+      
+      return res.status(500).json({ message: reason });
     }
   } catch (err) {
     console.error("Error purchasing ticket:", err);
@@ -110,13 +123,13 @@ async function handleWaitingQueue(userId, eventId, ticketId, req) {
         responseSent = true;
         resolve({
           status: 200,
-          data: { message: "Tickets are sold out. You did not get a ticket." },
+          data: { message: "Please Try again." },
         });
       }
     }, 30000); // 30 seconds timeout
 
     const notificationChannel = `user:${userId}:notification`;
-    const availabilityChannel = "ticket:availability";
+    const availabilityChannel = `ticket:availability:${ticketId}`;
 
     const unsubscribe = () => {
       redis.subscriber.unsubscribe(notificationChannel);
@@ -141,11 +154,13 @@ async function handleWaitingQueue(userId, eventId, ticketId, req) {
           unsubscribe();
           resolve({
             status: purchase ? 200 : 500,
-            data: { message: purchase ? `Ticket purchased successfully. ${purchase}` : 'Ticket purchase failed. Please try again.' },
+            data: { message: purchase ? `Ticket purchased successfully: ${purchase}` : 'Ticket purchase failed. Try again.' },
           });
         }
       }
     });
+
+
   });
 }
 
@@ -156,7 +171,8 @@ async function purchaseTicketMYS(req, userId, eventId, ticketId) {
   try {
     const reservedTicket = await reserveTicket(userId, TICKET_RESERVATION_SET_KEY, ticketId);
     if (!reservedTicket) {
-      return false;
+
+      return { purchased: false, ticket: null, reason: "Need to wait...", waiting: true };
     }
 
     req.is_reserve = true;
@@ -167,21 +183,20 @@ async function purchaseTicketMYS(req, userId, eventId, ticketId) {
     if (!availableTickets) {
       await redis.publisher.publish('ticket:solout', `${eventId}-${ticketId}`);
       await redis.redisClient.del(TICKET_RESERVATION_SET_KEY);
-      return false;
+      return { purchased: false, ticket: null, reason: "Tickets are sold out.", waiting: false };
     }
 
     //80% chance of payment success
     const paymentSuccess = Math.random() > 0.2;
     const result = await processPayment(userId, ticketId, eventId, paymentSuccess);
     if (result) {
-      req.is_reserve =  false;
+      req.is_reserve = false;
       req.TICKET_RESERVATION_SET_KEY = null;
       req.reservedTicket = null;
-      return ticketId;
+      return { purchased: true, ticket: ticketId, reason: null, waiting: false };
     }
 
-    console.log("------------------------------------------------>Payment failed", ticketId);
-    return false;
+    return { purchased: false, reason: "Payment Failed", waiting: false };
   } catch (err) {
     console.error("Error during ticket purchase:", err);
     return false;
@@ -194,18 +209,18 @@ async function reserveTicket(userId, reservationListKey, ticketId) {
 }
 
 
-async function processPayment(userId, ticketId,eventId, paymentSuccess) {
+async function processPayment(userId, ticketId, eventId, paymentSuccess) {
   const reservationListKey = `tickets_reservation:${ticketId}-list`;
   const reservationKey = `ticket_reserve-${ticketId}`;
   const ticketListKey = `tickets:${eventId}-list`;
 
   if (paymentSuccess) {
     await redis.redisClient.sRem(reservationListKey, reservationKey);
-    await redis.redisClient.sRem(ticketListKey, `ticket-${ticketId}`); 
-    console.log(`Payment completed for ticket ${ticketId}.`);
+    await redis.redisClient.sRem(ticketListKey, `ticket-${ticketId}`);
+    //console.log(`Payment completed for ticket ${ticketId}.`);
     return ticketId;
   } else {
-    console.log(`Payment failed or timed out for ticket ${ticketId}.`);
+    //console.log(`Payment failed or timed out for ticket ${ticketId}.`);
     return false;
   }
 }

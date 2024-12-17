@@ -71,7 +71,7 @@ function genAdminPassword(password) {
  * @param {*} salt - The salt stored in the database
  */
 function validatePassword(password, hash, salt) {
-  console.log({password, hash, salt})
+  //console.log({password, hash, salt})
   try {
     var hashVerify = crypto
       .pbkdf2Sync(password, salt, 10000, 128, "sha512")

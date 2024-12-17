@@ -6,12 +6,12 @@ Authorization: Bearer {{token}}
 {
   "title": "test",
   "description": "This is description",
-  "max_capacity": "200"
+  "max_capacity": "2000"
 }
 
 
 ###
-GET {{base_url}}/api/get-event-tickets?id=74
+GET {{base_url}}/api/get-event-tickets?id=83
 Content-Type: application/json
 Authorization: Bearer {{token}}
 

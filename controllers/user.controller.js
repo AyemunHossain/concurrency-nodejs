@@ -64,7 +64,7 @@ const userLoginDefault = async (req, res, next) => {
     }
     else {
 
-      console.log({ userDetails })
+      //console.log({ userDetails })
       ///User signin logic here
       const isValid = await passwordUtils.validatePassword(password, userDetails.hash, userDetails.salt);
 
