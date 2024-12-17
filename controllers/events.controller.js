@@ -63,6 +63,7 @@ const getTicket = async (req, res) => {
   }
 }
 
+// Improved Ticket Purchasing System with Concurrency Management
 const purchaseTicket = async (req, res) => {
   try {
     const { id, ticket_id } = req.body; // Event ID
@@ -73,177 +74,144 @@ const purchaseTicket = async (req, res) => {
     const TICKET_SET_KEY = `tickets:${id}-list`;
 
     // Check if tickets are sold out
-    const ticketsLeft = await redis.redisClient.multi().sCard(TICKET_SET_KEY).exec();
+    const ticketsLeft = await redis.redisClient.sCard(TICKET_SET_KEY);
     if (ticketsLeft === 0) {
-      const waitingCount = await redis.redisClient.multi().lLen(WAITING_QUEUE_KEY).exec();
-      if (waitingCount > 0) {
-
-      }
       return res.status(400).json({ message: "Tickets are sold out." });
     }
 
-    const resurvationListLength = await redis.redisClient.multi().sCard(TICKET_RESERVATION_SET_KEY).exec();
+    // Add user to the waiting queue if no reservations exist
+    const reservationListLength = await redis.redisClient.sCard(TICKET_RESERVATION_SET_KEY);
+    if (reservationListLength === 0) {
+      await redis.redisClient.rPush(WAITING_QUEUE_KEY, userId);
 
-    if (resurvationListLength === 0) {
-      await redis.redisClient.multi().rPush(WAITING_QUEUE_KEY, userId.toString()).exec();
-
-      await new Promise((resolve, reject) => {
-        let responseSent = false;
-
-        const timeout = setTimeout(() => {
-          if (!responseSent) {
-            responseSent = true;
-            resolve({
-              status: 200,
-              data: { message: "Tickets are sold out. You did not get a ticket." },
-            });
-          }
-        }, 30000); // 30 seconds timeout
-
-        redis.subscriber.subscribe(`user:${userId}:notification`, (message) => {
-          if (!responseSent) {
-            responseSent = true;
-            clearTimeout(timeout);
-            redis.subscriber.unsubscribe(`user:${userId}:notification`);
-            redis.subscriber.unsubscribe("ticket:availability");
-            resolve({
-              status: 200,
-              data: { message: message },
-            });
-          }
-        });
-
-        redis.subscriber.subscribe("ticket:availability", async (message) => {
-          if (!responseSent) {
-            const nextUser = await redis.redisClient.multi().lPop(WAITING_QUEUE_KEY).exec();
-            console.log({ nextUser, id });
-            if (nextUser) {
-              try {
-                const purchase = await purchaseTicketMYS(req, nextUser, id, ticket_id); // Attempt to process the next waiting user
-                if (purchase) {
-                  if (!responseSent) {
-                    responseSent = true;
-                    redis.subscriber.unsubscribe(`user:${userId}:notification`);
-                    redis.subscriber.unsubscribe("ticket:availability");
-                    return res.status(200).json({ message: `Ticket purchased successfully. ${purchase}` });
-                  }
-                } else {
-                  if (!responseSent) {
-                    responseSent = true;
-                    redis.subscriber.unsubscribe(`user:${userId}:notification`);
-                    redis.subscriber.unsubscribe("ticket:availability");
-                    return res.status(500).json({ message: 'Ticket purchase failed. Please try again.' });
-                  }
-                }
-              } catch (err) {
-                if (!responseSent) {
-                  responseSent = true;
-                  redis.subscriber.unsubscribe(`user:${userId}:notification`);
-                  redis.subscriber.unsubscribe("ticket:availability");
-                  return res.status(500).json({ message: 'Ticket purchase failed. Please try again.' });
-                }
-              }
-            }
-          }
-        });
-
-        redis.publisher.subscribe("ticket:solout", async (message) => {
-          const soloutEventId = message.split('-')[0];
-          const soloutTicketId = message.split('-')[1];
-          if (soloutEventId == id && soloutTicketId == ticket_id) {
-            if (!responseSent) {
-              responseSent = true;
-              clearTimeout(timeout);
-              redis.subscriber.unsubscribe(`user:${userId}:notification`);
-              redis.subscriber.unsubscribe("ticket:availability");
-              return res.status(200).json({ message: "Tickets are sold out. You did not get a ticket." });
-            }
-          }
-        });
-
-      }).then((result) => {
-        if (!responseSent) {
-          responseSent = true;
-          return res.status(result.status).json(result.data);
-        }
-      });
+      const result = await handleWaitingQueue(userId, id, ticket_id, req);
+      return res.status(result.status).json(result.data);
     }
 
-    // console.log({userId, id, ticket_id})
-    const purchase = await purchaseTicketMYS(req, userId, id, ticket_id)
+    // Direct ticket purchase attempt
+    const purchase = await purchaseTicketMYS(req, userId, id, ticket_id);
     if (purchase) {
       return res.status(200).json({ message: `Ticket purchased successfully. ${purchase}` });
     } else {
       return res.status(500).json({ message: 'Ticket purchase failed. Please try again.' });
     }
-
   } catch (err) {
+    console.error("Error purchasing ticket:", err);
     return res.status(500).json({ message: "Internal server error" });
   }
 };
 
-async function purchaseTicketMYS(req, userId, eventId, ticketId) {
+async function handleWaitingQueue(userId, eventId, ticketId, req) {
+  return new Promise((resolve) => {
+    let responseSent = false;
 
+    const timeout = setTimeout(() => {
+      if (!responseSent) {
+        responseSent = true;
+        resolve({
+          status: 200,
+          data: { message: "Tickets are sold out. You did not get a ticket." },
+        });
+      }
+    }, 30000); // 30 seconds timeout
+
+    const notificationChannel = `user:${userId}:notification`;
+    const availabilityChannel = "ticket:availability";
+
+    const unsubscribe = () => {
+      redis.subscriber.unsubscribe(notificationChannel);
+      redis.subscriber.unsubscribe(availabilityChannel);
+    };
+
+    redis.subscriber.subscribe(notificationChannel, (message) => {
+      if (!responseSent) {
+        responseSent = true;
+        clearTimeout(timeout);
+        unsubscribe();
+        resolve({ status: 200, data: { message } });
+      }
+    });
+
+    redis.subscriber.subscribe(availabilityChannel, async () => {
+      if (!responseSent) {
+        const nextUser = await redis.redisClient.lPop(WAITING_QUEUE_KEY);
+        if (nextUser === userId) {
+          const purchase = await purchaseTicketMYS(req, userId, eventId, ticketId);
+          responseSent = true;
+          unsubscribe();
+          resolve({
+            status: purchase ? 200 : 500,
+            data: { message: purchase ? `Ticket purchased successfully. ${purchase}` : 'Ticket purchase failed. Please try again.' },
+          });
+        }
+      }
+    });
+  });
+}
+
+async function purchaseTicketMYS(req, userId, eventId, ticketId) {
   const TICKET_RESERVATION_SET_KEY = `tickets_reservation:${eventId}-list`;
   const TICKET_SET_KEY = `tickets:${eventId}-list`;
-  const reservedTicket = await reserveTicket(userId, TICKET_RESERVATION_SET_KEY, ticketId);
 
   try {
-    if (reservedTicket) {
-      req.is_reserve = true;
-      req.TICKET_RESERVATION_SET_KEY = TICKET_RESERVATION_SET_KEY;
-      req.reservedTicket = reservedTicket;
+    const reservedTicket = await reserveTicket(userId, TICKET_RESERVATION_SET_KEY, ticketId);
+    if (!reservedTicket) {
+      return false;
+    }
 
-      const availableTickets = await redis.redisClient.multi().sIsMember(TICKET_SET_KEY, `ticket-${ticketId}`)
+    req.is_reserve = true;
+    req.TICKET_RESERVATION_SET_KEY = TICKET_RESERVATION_SET_KEY;
+    req.reservedTicket = reservedTicket;
 
-      console.log({availableTickets})
-      if (!availableTickets) {
-        await redis.publisher.publish('ticket:solout', `${eventId}-${ticketId}`);
-        await redis.redisClient.multi().del(TICKET_RESERVATION_SET_KEY);
-        return false;
-      }
+    const availableTickets = await redis.redisClient.sIsMember(TICKET_SET_KEY, `ticket-${ticketId}`);
+    if (!availableTickets) {
+      await redis.publisher.publish('ticket:solout', `${eventId}-${ticketId}`);
+      await redis.redisClient.del(TICKET_RESERVATION_SET_KEY);
+      return false;
+    }
 
-      if (availableTickets) {
+    //80% chance of payment success
+    const paymentSuccess = Math.random() > 0.2;
+    const result = await processPayment(userId, ticketId, eventId, paymentSuccess);
+    if (result) {
+      req.is_reserve =  false;
+      req.TICKET_RESERVATION_SET_KEY = null;
+      req.reservedTicket = null;
+      return ticketId;
+    }
 
-        setTimeout(() => {
-          
-        }, 2000);
-        // const result = await eventsModel.purchasingTicket({ event_id: eventId, ticket_id: ticketId });
-        const result = false;
-
-        if (result) {
-          const result = await redis.redisClient.multi().sRem(TICKET_SET_KEY, `ticket-${ticketId}`).exec(); 
-          req.is_reserve =  result?.[0] ? true : false;
-          req.TICKET_RESERVATION_SET_KEY = result?.[0] ? TICKET_RESERVATION_SET_KEY : null;
-          req.reservedTicket = result?.[0] ? reservedTicket : null;
-
-          return ticketId;
-        }
-
-        await redis.publisher.publish('ticket:solout', `${eventId}-${ticketId}`);
-        return false;
-      }
-    }else {
-      // todo
-      // const exists = await redisClient.sismember('mySet', 'item3');
-      return false};
+    console.log("------------------------------------------------>Payment failed", ticketId);
+    return false;
   } catch (err) {
+    console.error("Error during ticket purchase:", err);
     return false;
   }
-
-  return false;
 }
 
-// Reserve a ticket for the user
-async function reserveTicket(userId, reservationListKey, ticket_id) {
-  const result = await redis.redisClient
-    .multi()
-    .sRem(reservationListKey, `ticket_reserve-${ticket_id}`)
-    .exec();
-
-  const removedCount = result?.[0]; 
-  return removedCount === 1 ? `ticket_reserve-${ticket_id}` : null;
+async function reserveTicket(userId, reservationListKey, ticketId) {
+  const result = await redis.redisClient.sRem(reservationListKey, `ticket_reserve-${ticketId}`);
+  return result === 1 ? `ticket_reserve-${ticketId}` : null;
 }
+
+
+async function processPayment(userId, ticketId,eventId, paymentSuccess) {
+  const reservationListKey = `tickets_reservation:${ticketId}-list`;
+  const reservationKey = `ticket_reserve-${ticketId}`;
+  const ticketListKey = `tickets:${eventId}-list`;
+
+  if (paymentSuccess) {
+    await redis.redisClient.sRem(reservationListKey, reservationKey);
+    await redis.redisClient.sRem(ticketListKey, `ticket-${ticketId}`); 
+    console.log(`Payment completed for ticket ${ticketId}.`);
+    return ticketId;
+  } else {
+    console.log(`Payment failed or timed out for ticket ${ticketId}.`);
+    return false;
+  }
+}
+
+
+
 export default {
   createEvent,
   getTicket,

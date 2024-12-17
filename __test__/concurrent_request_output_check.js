@@ -4,8 +4,8 @@ import { Worker } from "worker_threads";
 
 // API endpoint configuration
 const API_URL = "http://localhost:6001/api/purchase-ticket"; // Replace with your API endpoint
-const TOTAL_USERS = 200; // Total number of simulated users
-const CONCURRENCY_LIMIT = 10; // Number of concurrent requests
+const TOTAL_USERS = 2000; // Total number of simulated users
+const CONCURRENCY_LIMIT = 2000; // Number of concurrent requests
 const RETRY_LIMIT = 1; // Number of retries for failed requests
 
 // Initialize the logging worker
@@ -21,11 +21,11 @@ const simulateUserRequest = async (reqId, ticket_id, retryCount = 0) => {
   try {
     const response = await axios.post(
       API_URL,
-      { id: 62, ticket_id },
+      { id: 74, ticket_id },
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer eyJhbGciOiJQUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjgsInJvbGUiOiJ1c2VyIiwiZW1haWwiOiJ0ZXN0NkBnbWFpbC5jb20iLCJmdWxsX25hbWUiOiJ0ZXN0IiwidHlwZSI6ImFjY2Vzcy10b2tlbiIsImlhdCI6MTczMzk0NTk0NywiZXhwIjoxNzMzOTY3NTQ3fQ.l_8WXT4pZP6y1D1WX9PQNT1Kon0bzXH0U3trT3cH0_LAWivXE5FGEHOnvhIBP_i3U5SAncA4reRDGEU1XGdA0NL2J54TK9ZMqD-pHg60X9THGph4kV87f4LjolRnhpZ1ATg-ZtagqtaxjNoHhtuVIbzISBLXEVX2Z_f3wS152JHumXKCXCHzUUEqa2UWYV8Wav9_nfuRygQXVqpJXET_LYI6J2Ju5MIwoQgJG1CIOlhvL-3cpC3VxNcCpLE7pxJSHhOij_cI35sq5hKtrIEQC6NYXyiOCHbFgDF-DAsOT0anSlN9_Ohjm10MzNtNAOb5Oe8sBnvcavxYMbKEmLRGSkYcF_DgXgAa5SOo39GdbJNat0et1pFPkUYMzdGyZKYGc7vTZexNMfo2dI28dCebYiz74kfi2VoMYbzp9X97_ItQjU0QZnFgheVaCrGJIjv0MqhkfS7JrL1VbukFQImI8nJC9OZCTppC9nhtpa9vxwlyKVHmmSg46xb3vynEJk32nYJRPo0j9n-s9ypJtXrUe9pe7PvvO3LTEOVG22Ci1Mv_CvrVxL1qFKPO2kC5Hv3CtNMps4pKKGz9AWQpO24lRuX-DGe8nLJ8UJy7i1lFJxbyFeg5YdvAUzhYz_Cb9UpCLErDmoAWzX-qubgp-opyD5uz6_N141tECUUdn28D1X0"
+          Authorization: "Bearer eyJhbGciOiJQUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjgsInJvbGUiOiJ1c2VyIiwiZW1haWwiOiJ0ZXN0NkBnbWFpbC5jb20iLCJmdWxsX25hbWUiOiJ0ZXN0IiwidHlwZSI6ImFjY2Vzcy10b2tlbiIsImlhdCI6MTczNDMzNDA0NiwiZXhwIjoxNzM0MzU1NjQ2fQ.USRk2y9M-JqEbDmpIb-o47ksUTTVCagHuVwlKh6ZJz7JRvQcS5TApQ2vGtRj-P1HTqQdIC2npFCpiwtEecUJkfheR4ll_O_0Z2jLkm_aKaO_k8mfqnXPWx7a6aTGeaD5Pcoh9ujjTHEIHV76N9eT5A7LWaPkfqLrvSjT1KcnjYGFH3ElK-Dag8lpuypZF2M3A5mpcsItsdLHmal721hZX9yG4uqa52h0muaexevjxAcctAalvHvGpxsiqla6RPJsMLNv_EvKGQ99MS2pX5DIIW_iDtVltICJC3yeGMYaBQSe8xpLjwocMA1MrHwdAGtzxo0p2WNFEmND2DttvfsfVuZYNouJARxej4BVhWflkhoAh3QtIOp_hdqLtkeYAs4uXtq0WLYZPkzKlnEePClH0abKT7B_-e9FuYqhwBDWBFkBYi-IduaObTnCgv13xtdOu_tA2n-WlONqzFiLJXU8Y2oKoVhToY7NCoQO4_7R0WFKyyZ9KZhdvAjuEqnWOPj3UmCYWBmBT4nmHSUKcua_CJMhICw0MSe3FBv6r0ZFeWYfLWo47V9qqU5Z5Z9uzVuP_EQsZ6CwGHItCr8LiFVv-BVapkpMhSkUMe1K6lz5OC1e_iLzDbFvAWRTJoxGU86dtoTg14xsABtxa1hTO98kxiNQLnZSVqU_apY56pIpn9I"
         }
       }
     );
@@ -50,7 +50,7 @@ const runConcurrentRequests = async () => {
   const limit = pLimit(CONCURRENCY_LIMIT); // Concurrency limiter
   const userRequests = Array.from({ length: TOTAL_USERS }, (_, i) => {
     const reqId = i + 1;
-    const ticket_id = 10288 + reqId; // Increment ticket_id for each user
+    const ticket_id = 12688 + reqId; // Increment ticket_id for each user
     return limit(() => simulateUserRequest(reqId, ticket_id));
   });
 
