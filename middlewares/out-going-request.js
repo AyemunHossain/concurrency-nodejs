@@ -29,7 +29,8 @@ async function handleReservationCleanup(req, logMessage) {
       await redis.redisClient
         .sAdd(req.TICKET_RESERVATION_SET_KEY, req.reservedTicket.toString());
       //Publish ticket available
-      await redis.redisClient.publish(`ticket:availability:${req.reservedTicket}`, req.reservedTicket.toString());
+      const availabilityChannel = `ticket:availability`;
+      await redis.redisClient.publish(availabilityChannel, req.reservedTicket.toString());
       // console.info(`[Cleanup Success] ${logMessage} Ticket ${req.reservedTicket} re-added to ${req.TICKET_RESERVATION_SET_KEY}`);
     } catch (err) {
       console.error(`[Cleanup Failure] ${logMessage} Redis error:`, err);

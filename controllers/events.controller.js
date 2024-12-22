@@ -97,7 +97,7 @@ const purchaseTicket = async (req, res) => {
       return res.status(200).json({ message: `Ticket purchased successfully. ${ticket}` });
     } else {
 
-      if(waiting){
+      if (waiting) {
         const alreadyInQueue = await redis.redisClient.lPos(WAITING_QUEUE_KEY, String(userId));
         if (alreadyInQueue === null) {
           await redis.redisClient.rPush(WAITING_QUEUE_KEY, String(userId));
@@ -105,7 +105,7 @@ const purchaseTicket = async (req, res) => {
         const result = await handleWaitingQueue(userId, id, ticket_id, req);
         return res.status(result.status).json(result.data);
       }
-      
+
       return res.status(500).json({ message: reason });
     }
   } catch (err) {
@@ -115,52 +115,60 @@ const purchaseTicket = async (req, res) => {
 };
 
 async function handleWaitingQueue(userId, eventId, ticketId, req) {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     let responseSent = false;
 
     const timeout = setTimeout(() => {
       if (!responseSent) {
         responseSent = true;
+        cleanup();
         resolve({
           status: 200,
-          data: { message: "Please Try again." },
+          data: { message: "Waiting timeout, Please Try again." },
         });
       }
     }, 30000); // 30 seconds timeout
 
     const notificationChannel = `user:${userId}:notification`;
-    const availabilityChannel = `ticket:availability:${ticketId}`;
+    const availabilityChannel = `ticket:availability`;
 
-    const unsubscribe = () => {
+    const cleanup = () => {
+      clearTimeout(timeout);
       redis.subscriber.unsubscribe(notificationChannel);
       redis.subscriber.unsubscribe(availabilityChannel);
     };
 
-    redis.subscriber.subscribe(notificationChannel, (message) => {
-      if (!responseSent) {
-        responseSent = true;
-        clearTimeout(timeout);
-        unsubscribe();
-        resolve({ status: 200, data: { message } });
-      }
-    });
+    const messageHandler = async (channel, message) => {
+      if (responseSent) return;
 
-    redis.subscriber.subscribe(availabilityChannel, async () => {
-      if (!responseSent) {
-        const nextUser = await redis.redisClient.lPop(WAITING_QUEUE_KEY);
-        if (nextUser === userId) {
-          const purchase = await purchaseTicketMYS(req, userId, eventId, ticketId);
+      if (channel === notificationChannel) {
+        responseSent = true;
+        cleanup();
+        resolve({ status: 200, data: { message } });
+      } else if (channel === availabilityChannel) {
+        try {
+          const nextUser = await redis.redisClient.lPop(WAITING_QUEUE_KEY);
+          if (nextUser === userId) {
+            const purchase = await purchaseTicketMYS(req, userId, eventId, ticketId);
+            responseSent = true;
+            cleanup();
+            resolve({
+              status: purchase ? 200 : 500,
+              data: { message: purchase ? `Ticket purchased successfully: ${purchase}` : 'Ticket purchase failed. Try again.' },
+            });
+          }
+        } catch (error) {
           responseSent = true;
-          unsubscribe();
-          resolve({
-            status: purchase ? 200 : 500,
-            data: { message: purchase ? `Ticket purchased successfully: ${purchase}` : 'Ticket purchase failed. Try again.' },
-          });
+          cleanup();
+          reject({ status: 500, data: { message: 'An error occurred while processing your request.' } });
         }
       }
-    });
+    };
 
+    redis.subscriber.on('message', messageHandler);
 
+    redis.subscriber.subscribe(notificationChannel);
+    redis.subscriber.subscribe(availabilityChannel);
   });
 }
 
@@ -187,7 +195,7 @@ async function purchaseTicketMYS(req, userId, eventId, ticketId) {
     }
 
     //80% chance of payment success
-    const paymentSuccess = Math.random() > 0.2;
+    const paymentSuccess = Math.random() < 0.1;
     const result = await processPayment(userId, ticketId, eventId, paymentSuccess);
     if (result) {
       req.is_reserve = false;
