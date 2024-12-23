@@ -1,0 +1,1001 @@
+2024-12-24 01:09:17 [INFO]: Simulating 1000 user requests with a concurrency limit of 200...
+2024-12-24 01:09:17 [ERROR]: User 4: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 7: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 11: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 12: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 18: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 29: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 30: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 32: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [INFO]: User 34: {"message":"Ticket purchased successfully. 39572"}
+2024-12-24 01:09:17 [ERROR]: User 35: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 37: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 39: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 42: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 46: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 47: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 49: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 50: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 52: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 55: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 56: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 62: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 65: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 67: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 17: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 20: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 69: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 51: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 71: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 72: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 60: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 75: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 79: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 3: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 83: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 85: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 28: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 87: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 89: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 92: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 93: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 95: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 41: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 97: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 48: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 59: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 82: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [INFO]: User 102: {"message":"Ticket purchased successfully. 39570"}
+2024-12-24 01:09:17 [ERROR]: User 88: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [INFO]: User 66: {"message":"Ticket purchased successfully. 39574"}
+2024-12-24 01:09:17 [ERROR]: User 101: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 110: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 105: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 113: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 108: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 109: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 111: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 119: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 120: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 121: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 128: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 125: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 130: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 133: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 70: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 129: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 131: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 135: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 138: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 140: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 139: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 143: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 148: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 151: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 77: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 150: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 155: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 158: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 153: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 160: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 161: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 157: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [INFO]: User 168: {"message":"Ticket purchased successfully. 39576"}
+2024-12-24 01:09:17 [INFO]: User 170: {"message":"Ticket purchased successfully. 39578"}
+2024-12-24 01:09:17 [ERROR]: User 171: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 173: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 177: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 181: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 183: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 187: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 193: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 5: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 19: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 123: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 141: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 207: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 201: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 203: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 205: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 209: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 223: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 227: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 231: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 235: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 211: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 213: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 245: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 257: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 269: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 283: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 285: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 287: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 271: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 273: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 281: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 277: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 297: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 295: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 299: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 307: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 301: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [ERROR]: User 305: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:17 [INFO]: User 309: {"message":"Ticket purchased successfully. 39577"}
+2024-12-24 01:09:18 [ERROR]: User 293: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:18 [ERROR]: User 315: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:18 [ERROR]: User 317: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:18 [ERROR]: User 321: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:18 [ERROR]: User 323: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:18 [INFO]: User 327: {"message":"Ticket purchased successfully. 39575"}
+2024-12-24 01:09:18 [ERROR]: User 325: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:47 [INFO]: User 24: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 27: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 31: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [ERROR]: User 331: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:47 [INFO]: User 43: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 2: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 54: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 58: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 9: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 13: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 25: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 45: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 61: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 64: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 68: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [ERROR]: User 333: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:47 [INFO]: User 57: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 73: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 74: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 63: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 8: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 14: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 21: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 23: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [ERROR]: User 335: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:47 [INFO]: User 33: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 78: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 80: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 86: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 36: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 38: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 40: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 90: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 91: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 44: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 99: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [ERROR]: User 341: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:47 [INFO]: User 96: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [ERROR]: User 343: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:47 [INFO]: User 104: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 98: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 100: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 106: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 107: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [ERROR]: User 345: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:47 [INFO]: User 116: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 114: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 118: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 117: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 112: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 124: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 122: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 76: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 127: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [ERROR]: User 351: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:47 [INFO]: User 136: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [ERROR]: User 355: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:47 [ERROR]: User 353: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:47 [INFO]: User 132: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 137: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 134: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 144: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 145: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 147: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 146: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 81: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 152: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [ERROR]: User 361: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:47 [ERROR]: User 363: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:47 [INFO]: User 84: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 94: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 154: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 163: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 165: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 167: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 103: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 115: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 174: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 126: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 179: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [ERROR]: User 365: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:47 [INFO]: User 142: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 159: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 149: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 166: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 162: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 164: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 169: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 172: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 182: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 188: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 178: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 191: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 175: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 184: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 180: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 195: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 186: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [ERROR]: User 371: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:47 [INFO]: User 198: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 189: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 185: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 194: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 190: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 196: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 199: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 197: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 200: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 1: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 6: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 10: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 15: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 16: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 22: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 26: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 53: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 156: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 176: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 192: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 202: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 204: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [ERROR]: User 373: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:47 [INFO]: User 375: {"message":"Ticket purchased successfully. 39573"}
+2024-12-24 01:09:47 [INFO]: User 206: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 208: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [ERROR]: User 383: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:47 [INFO]: User 214: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 218: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 220: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 265: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 246: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 248: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [ERROR]: User 423: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:47 [INFO]: User 216: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 222: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 226: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 228: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 230: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 233: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 241: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 243: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 276: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 279: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 255: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 258: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 267: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 260: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 263: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 272: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 282: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [ERROR]: User 381: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:47 [INFO]: User 264: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 266: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 212: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 278: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 289: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 274: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 215: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 275: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 217: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 210: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 288: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [ERROR]: User 431: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:47 [INFO]: User 221: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 224: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 234: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 244: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:47 [INFO]: User 219: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 291: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 250: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 225: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 294: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 252: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 254: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 256: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 261: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 229: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 232: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 300: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 280: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 236: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 284: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 237: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 292: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 313: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 286: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 303: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 308: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 238: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 239: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 240: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 312: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 298: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 242: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 247: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 320: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 322: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 304: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 310: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 314: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 249: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 251: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 318: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 324: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 253: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 259: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 262: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 329: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 326: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 328: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 268: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 270: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 290: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 296: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 302: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 306: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 311: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 316: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [INFO]: User 319: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:09:48 [ERROR]: User 393: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:48 [ERROR]: User 411: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:48 [ERROR]: User 481: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:48 [ERROR]: User 503: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:48 [ERROR]: User 521: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:09:48 [ERROR]: User 493: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:17 [INFO]: User 330: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 332: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 334: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 336: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 337: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 338: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 339: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 342: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 340: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [ERROR]: User 561: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:17 [ERROR]: User 563: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:17 [INFO]: User 347: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 346: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 344: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 348: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 349: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 352: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 357: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 356: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 350: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 354: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 360: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [ERROR]: User 571: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:17 [ERROR]: User 573: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:17 [INFO]: User 358: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 362: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 359: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 364: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [ERROR]: User 581: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:17 [ERROR]: User 583: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:17 [INFO]: User 366: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 372: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 367: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 368: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 369: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 370: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 376: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [ERROR]: User 591: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:17 [INFO]: User 374: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [ERROR]: User 593: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:17 [INFO]: User 378: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 379: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 377: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 407: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 386: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 389: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 390: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 391: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 395: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 399: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 382: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 412: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 416: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 418: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 394: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 420: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 404: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 406: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 421: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 384: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 409: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 422: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 424: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 387: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 414: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 417: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 427: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 419: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 380: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 428: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 430: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 432: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 385: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 388: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 426: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 429: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:17 [INFO]: User 392: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 401: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 402: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 434: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 405: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 410: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 436: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 442: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 438: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [ERROR]: User 603: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:18 [INFO]: User 415: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 437: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 446: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 451: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 453: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 455: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [ERROR]: User 601: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:18 [INFO]: User 458: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [ERROR]: User 613: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:18 [INFO]: User 435: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 425: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 459: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 443: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 449: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 452: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 444: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 460: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 439: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 461: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 462: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 464: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 466: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 441: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 454: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 468: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 470: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 471: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 457: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 465: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 445: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 448: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 469: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 473: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 474: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 472: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 476: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 456: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [ERROR]: User 621: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:18 [INFO]: User 463: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 467: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 477: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 478: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 480: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 482: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 483: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 475: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 479: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 485: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 484: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 486: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 487: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 488: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 489: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 490: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 413: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 433: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 396: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [ERROR]: User 631: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:18 [INFO]: User 397: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 398: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 400: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 403: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 408: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 440: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 447: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [ERROR]: User 641: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:18 [INFO]: User 450: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 496: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [ERROR]: User 633: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:18 [INFO]: User 522: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [ERROR]: User 653: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:18 [INFO]: User 514: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 492: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 520: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 497: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 502: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 505: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 506: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 509: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 513: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 525: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [ERROR]: User 673: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:18 [INFO]: User 526: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 528: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 529: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 516: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 531: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 517: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 540: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 491: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 545: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 536: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 549: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 519: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 551: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 494: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 499: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 501: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 532: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 533: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 535: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 537: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 539: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 508: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 524: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 527: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 530: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 541: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 538: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 548: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 544: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 542: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 546: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 550: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 553: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 518: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 552: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 523: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 495: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 498: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 554: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 500: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 504: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 507: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 510: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 511: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 512: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 515: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 534: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 543: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [INFO]: User 547: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:18 [ERROR]: User 703: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:18 [INFO]: User 681: {"message":"Ticket purchased successfully. 39569"}
+2024-12-24 01:10:18 [ERROR]: User 773: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:18 [ERROR]: User 693: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:47 [INFO]: User 555: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 556: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 557: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 559: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 558: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 560: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 562: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 565: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 564: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [ERROR]: User 783: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:47 [INFO]: User 566: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 567: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 569: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 568: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 570: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 572: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 575: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 574: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [ERROR]: User 793: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:47 [INFO]: User 577: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 579: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 576: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 578: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 580: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 582: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 584: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 585: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 586: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 587: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [ERROR]: User 803: Failed after 1 attempts. Error: {"message":"Payment Failed"}
+2024-12-24 01:10:47 [INFO]: User 588: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 589: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 590: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 592: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 595: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 594: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 597: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 596: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [INFO]: User 813: {"message":"Ticket purchased successfully. 39571"}
+2024-12-24 01:10:47 [ERROR]: User 814: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 815: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 816: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 817: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 818: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 819: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 820: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 821: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 822: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 823: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [INFO]: User 598: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [ERROR]: User 825: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 824: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [INFO]: User 599: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [ERROR]: User 827: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 826: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [INFO]: User 600: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [ERROR]: User 829: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 828: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 830: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 831: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 832: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 834: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 835: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 833: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 836: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 838: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 837: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 839: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 842: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 843: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 841: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 840: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 846: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 844: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 845: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [INFO]: User 604: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [ERROR]: User 848: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 847: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [INFO]: User 605: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:47 [ERROR]: User 850: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 849: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:47 [ERROR]: User 852: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 851: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 853: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [INFO]: User 609: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [ERROR]: User 854: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [INFO]: User 606: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 612: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 611: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [ERROR]: User 856: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [INFO]: User 614: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [ERROR]: User 855: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 857: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 858: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 859: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 860: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [INFO]: User 607: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 615: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 617: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [ERROR]: User 863: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 866: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [INFO]: User 602: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 608: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 619: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [ERROR]: User 864: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 861: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 865: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [INFO]: User 610: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 616: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [ERROR]: User 862: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 867: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 870: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [INFO]: User 618: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [ERROR]: User 872: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [INFO]: User 620: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [ERROR]: User 868: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 871: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 869: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 873: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [INFO]: User 625: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 624: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [ERROR]: User 875: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 881: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 887: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 877: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 874: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 894: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 882: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 888: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 890: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 892: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 896: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 879: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 885: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 889: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 891: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 895: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 876: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 878: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 880: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 883: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 884: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 886: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [INFO]: User 622: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [ERROR]: User 893: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [INFO]: User 626: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 642: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 635: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 638: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [ERROR]: User 897: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [INFO]: User 628: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 644: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 647: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 648: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 646: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 629: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 634: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 623: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 637: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [ERROR]: User 899: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 898: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [INFO]: User 652: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 636: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 639: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 663: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 655: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 668: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 651: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 659: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 658: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 661: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 662: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 640: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 671: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 643: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 665: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 627: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 666: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 630: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 670: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 632: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 649: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 664: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 656: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 654: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 645: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 650: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 667: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 669: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [ERROR]: User 916: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 919: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 921: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [INFO]: User 657: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [ERROR]: User 900: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 903: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 907: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 901: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 910: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [INFO]: User 660: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [ERROR]: User 906: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 908: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 911: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 902: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 904: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 905: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 909: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 912: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 923: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 914: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 918: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 913: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 920: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 915: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 917: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [INFO]: User 674: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 675: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 672: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 676: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [ERROR]: User 922: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 927: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 933: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 924: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 925: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 926: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 928: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 929: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 930: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 931: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 932: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 934: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 936: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 963: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 935: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 944: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 947: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 958: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 960: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 961: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 968: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 967: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 971: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 974: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 976: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 978: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [INFO]: User 679: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [ERROR]: User 983: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 987: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 988: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 989: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 990: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 991: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 994: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 986: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 992: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 938: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 939: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 940: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 941: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 942: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 945: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 948: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 949: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 998: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 995: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 952: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 953: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 956: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 959: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 964: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 999: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 937: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 943: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 946: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 997: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 950: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 951: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 965: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 954: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 975: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 955: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 980: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 981: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 957: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 962: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 966: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 969: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 970: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 972: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 973: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 977: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 979: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 982: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 984: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 1000: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [INFO]: User 680: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [ERROR]: User 985: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [ERROR]: User 996: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [INFO]: User 734: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 735: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 684: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 686: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 689: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 690: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 692: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 694: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 696: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 699: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 702: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 704: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 708: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 713: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 717: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 719: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 723: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [ERROR]: User 993: Failed after 1 attempts. Error: {"message":"Tickets are sold out."}
+2024-12-24 01:10:48 [INFO]: User 739: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 740: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 741: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 743: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 744: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 746: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 677: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 687: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 748: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 751: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 754: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 757: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 698: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 678: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 714: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 682: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 716: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 752: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 718: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 697: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 701: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 753: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 706: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 683: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 685: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 688: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 691: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 760: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 724: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 695: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 700: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 707: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 762: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 738: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 712: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 720: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 747: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 763: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 705: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 722: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 725: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 766: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 767: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 768: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 709: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 710: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 726: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 711: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 730: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 732: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 745: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 727: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 728: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 729: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 715: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 731: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 733: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 721: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 771: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 736: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 750: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 756: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 770: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 772: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 755: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 737: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 749: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 759: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 765: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 742: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 758: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 761: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 769: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 775: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 764: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:10:48 [INFO]: User 774: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 776: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 777: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 778: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 780: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 779: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 781: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 782: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 785: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 784: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 787: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 789: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 788: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 786: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 791: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 790: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 792: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 794: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 796: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 797: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 798: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 795: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 800: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 799: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 801: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 802: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 804: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 805: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 806: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 808: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 807: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 809: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 810: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 812: {"message":"Waiting timeout, Please Try again."}
+2024-12-24 01:11:17 [INFO]: User 811: {"message":"Waiting timeout, Please Try again."}

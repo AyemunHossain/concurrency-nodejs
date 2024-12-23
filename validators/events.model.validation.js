@@ -13,6 +13,7 @@ const getTicket = Joi.object({
 const purchaseTicket = Joi.object({
   id: Joi.number().required(),
   ticket_id: Joi.number().required(),
+  user_id: Joi.number().required()
 });
 
 export default {

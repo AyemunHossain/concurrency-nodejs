@@ -3,6 +3,10 @@ import eventsModel from '../models/event.model.js';
 import redis from "../microservices/redis-connect.js";
 import eventModel from '../models/event.model.js';
 
+
+redis.subscriber.setMaxListeners(200); // Set to a higher number as needed
+
+
 const createEvent = async (req, res) => {
   try {
     const user_id = req.user.sub;
@@ -67,7 +71,7 @@ const getTicket = async (req, res) => {
 const purchaseTicket = async (req, res) => {
   try {
     const { id, ticket_id } = req.body; // Event ID
-    const userId = req.user.sub;
+    const userId = req.body.user_id;
 
     const TICKET_RESERVATION_SET_KEY = `tickets_reservation:${id}-list`;
     const WAITING_QUEUE_KEY = `users-waiting:${id}-list`;
@@ -130,7 +134,7 @@ async function handleWaitingQueue(userId, eventId, ticketId, req) {
     }, 30000); // 30 seconds timeout
 
     const notificationChannel = `user:${userId}:notification`;
-    const availabilityChannel = `ticket:availability`;
+    const availabilityChannel = `ticket:availability:ticket_reserve-${ticketId}`;
 
     const cleanup = () => {
       clearTimeout(timeout);
@@ -147,6 +151,7 @@ async function handleWaitingQueue(userId, eventId, ticketId, req) {
         resolve({ status: 200, data: { message } });
       } else if (channel === availabilityChannel) {
         try {
+          
           const nextUser = await redis.redisClient.lPop(WAITING_QUEUE_KEY);
           if (nextUser === userId) {
             const purchase = await purchaseTicketMYS(req, userId, eventId, ticketId);
@@ -167,8 +172,21 @@ async function handleWaitingQueue(userId, eventId, ticketId, req) {
 
     redis.subscriber.on('message', messageHandler);
 
-    redis.subscriber.subscribe(notificationChannel);
-    redis.subscriber.subscribe(availabilityChannel);
+    redis.subscriber.subscribe(notificationChannel, (err) => {
+      if (err) {
+        responseSent = true;
+        cleanup();
+        reject({ status: 500, data: { message: 'Failed to subscribe to notification channel.' } });
+      }
+    });
+
+    redis.subscriber.subscribe(availabilityChannel, (err) => {
+      if (err) {
+        responseSent = true;
+        cleanup();
+        reject({ status: 500, data: { message: 'Failed to subscribe to availability channel.' } });
+      }
+    });
   });
 }
 
