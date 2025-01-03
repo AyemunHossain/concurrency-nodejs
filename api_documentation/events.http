@@ -1,0 +1,28 @@
+###
+POST {{base_url}}/api/create-event
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "title": "test",
+  "description": "This is description",
+  "max_capacity": "1000"
+}
+
+
+###
+GET {{base_url}}/api/get-event-tickets?id=107
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+
+###
+POST {{base_url}}/api/purchase-ticket
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "id": 102,
+  "ticket_id": 39599,
+  "user_id": 1
+}
